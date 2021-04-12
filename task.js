@@ -6,7 +6,7 @@ const postsData = https.get('http://jsonplaceholder.typicode.com/posts');
 console.log(JSON.parse(postsData));
 
 // Write data to results/posts.json file using fs module
-fs.writeFile('/results/posts.json', postsData, function (err,data) {
+fs.writeFile('/results/posts.json', postsData, (err) => {
   if (err) {
     return console.log(err);
   }
