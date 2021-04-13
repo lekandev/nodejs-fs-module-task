@@ -11,7 +11,7 @@ https.get("https://jsonplaceholder.typicode.com/posts", (res) => {
 
   res.on('close', () => {
     // Write data to results/posts.json file using fs module
-    fs.writeFile("./results/posts.json", data, (err) => {
+    fs.writeFile("./result/posts.json", data, (err) => {
       if (err) {
         return console.log(err);
       }
